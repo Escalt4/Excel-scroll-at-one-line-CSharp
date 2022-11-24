@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M6ktTGbae7PwrMS2sIOWs23W+EhnhCSudQqB9JAbdxy0qFYQoJfBjLi7stVfoD+dg8jmSO7fJbkk6S2bbl7gTw==",
+  "dgSpecHash": "mwJusjPuJrHu8Fi5JpcUKUF+fc/XjIo1Z5rAWn8sBdF2dlWC4LopiO/bE/LR7LAy9Ld+Wxr73SB4XhD4UtOk8w==",
   "success": true,
-  "projectFilePath": "E:\\Програмирование\\C#\\Прокрутка Excel по одной строке\\ExcelScrollAtOneLine\\ExcelScrollAtOneLine.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Прокрутка Excel по одной строке\\ExcelScrollAtOneLine\\ExcelScrollAtOneLine.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
