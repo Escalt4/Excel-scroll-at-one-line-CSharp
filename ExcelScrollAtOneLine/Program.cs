@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace ExcelScrollAtOneLine
@@ -17,6 +18,24 @@ namespace ExcelScrollAtOneLine
         [DllImport("user32.dll")]
         private static extern IntPtr GetForegroundWindow();
 
+        //[DllImport("user32.dll")]
+        //private static extern int GetWindowThreadProcessId(IntPtr handle, out uint processId);
+
+        //private static string GetProcessPath(IntPtr hwnd)
+        //{
+        //    uint pid;
+        //    GetWindowThreadProcessId(hwnd, out pid);
+
+        //    if (pid != 0)
+        //    {
+        //        Process proc = Process.GetProcessById((int)pid);
+        //                        Console.WriteLine(proc);
+        //        return proc.MainModule.FileName.ToString().ToLower();
+        //    }
+
+        //    return "";
+        //}
+
         public static void Main(string[] args)
         {
             const int spiGetwheelscrolllines = 0x0068;
@@ -26,13 +45,19 @@ namespace ExcelScrollAtOneLine
             SystemParametersInfoA(spiGetwheelscrolllines, 0, out defaultWheelSpeed, 0);
             uint curWheelSpeed = defaultWheelSpeed;
 
-            StringBuilder sb = new StringBuilder(1024);
+            //string processPath;
+
+            StringBuilder stringBuilder = new StringBuilder(1024);
+            string windowText;
 
             while (true)
             {
-                GetWindowText(GetForegroundWindow(), sb, sb.Capacity);
+                //processPath = GetProcessPath(GetForegroundWindow());
+                GetWindowText(GetForegroundWindow(), stringBuilder, stringBuilder.Capacity);
+                windowText = stringBuilder.ToString();
 
-                switch (sb.ToString().Contains(" - Excel"))
+                //switch (processPath.Length > 9 && processPath.Substring(processPath.Length - 9) == "excel.exe")
+                switch (windowText.Length > 8 && windowText.Substring(windowText.Length - 8) == " - Excel")
                 {
                     case true when curWheelSpeed != 1:
                         SystemParametersInfo(spiSetwheelscrolllines, 1, 0, 3);
