@@ -1,2 +1,0 @@
-E:\Програмирование\C#\Прокрутка Excel по одной строке\ExcelScrollAtOneLine\bin\Release\net6.0\publish\win-x64\ExcelScrollAtOneLine.pdb
-E:\Програмирование\C#\Прокрутка Excel по одной строке\ExcelScrollAtOneLine\bin\Release\net6.0\publish\win-x64\ExcelScrollAtOneLine.exe
