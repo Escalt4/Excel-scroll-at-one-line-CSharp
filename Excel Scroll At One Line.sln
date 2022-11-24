@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelScrollAtOneLine", "ExcelScrollAtOneLine\ExcelScrollAtOneLine.csproj", "{D513D18A-41A3-4238-B076-669EED368F2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel Scroll At One Line", "Excel Scroll At One Line\Excel Scroll At One Line.csproj", "{D513D18A-41A3-4238-B076-669EED368F2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
